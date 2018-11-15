@@ -1,9 +1,10 @@
 package com.csg.exchange.client.service.receiver;
 
-import com.csg.exchange.client.service.webserviceClient.AlertInfo;
-import com.csg.exchange.client.service.webserviceClient.CountriesPort;
-import com.csg.exchange.client.service.webserviceClient.CountriesPortService;
-import com.csg.exchange.client.service.webserviceClient.PushAlertInfoRequest;
+import com.csg.exchange.client.service.webServiceClient.AlertInfo;
+import com.csg.exchange.client.service.webServiceClient.CountriesPort;
+import com.csg.exchange.client.service.webServiceClient.CountriesPortService;
+import com.csg.exchange.client.service.webServiceClient.PushAlertInfoRequest;
+
 
 public class Receiver extends AbstractReceiver{
     @Override
