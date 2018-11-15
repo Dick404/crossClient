@@ -1,5 +1,5 @@
 
-package com.csg.exchange.client.service.webServiceClient;
+package com.csg.exchange.client.service.webserviceClient;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>alertInfo complex type的 Java 类。
+ * <p>alertInfo complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="alertInfo">
@@ -51,7 +51,7 @@ import javax.xml.bind.annotation.XmlType;
     "areaCode",
     "id",
     "originalID",
-    "ipAddress",
+    "iPAddress",
     "alarmID",
     "alarmCate",
     "alarmType",
@@ -68,7 +68,9 @@ import javax.xml.bind.annotation.XmlType;
     "time",
     "mainData",
     "sendto",
-    "subject"
+    "subject",
+        "platform",
+        "host"
 })
 public class AlertInfo {
 
@@ -78,8 +80,8 @@ public class AlertInfo {
     protected String id;
     @XmlElement(required = true)
     protected String originalID;
-    @XmlElement(name = "iPAddress", required = true)
-    protected String ipAddress;
+    @XmlElement(required = true)
+    protected String iPAddress;
     @XmlElement(required = true)
     protected String alarmID;
     @XmlElement(required = true)
@@ -114,9 +116,12 @@ public class AlertInfo {
     protected String sendto;
     @XmlElement(required = true)
     protected String subject;
-
+    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    protected String platform;
+    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    protected String host;
     /**
-     * 获取areaCode属性的值。
+     * 锟斤拷取areaCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -128,7 +133,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置areaCode属性的值。
+     * 锟斤拷锟斤拷areaCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -140,7 +145,7 @@ public class AlertInfo {
     }
 
     /**
-     * 获取id属性的值。
+     * 锟斤拷取id锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -152,7 +157,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置id属性的值。
+     * 锟斤拷锟斤拷id锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -164,7 +169,7 @@ public class AlertInfo {
     }
 
     /**
-     * 获取originalID属性的值。
+     * 锟斤拷取originalID锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -176,7 +181,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置originalID属性的值。
+     * 锟斤拷锟斤拷originalID锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -188,31 +193,31 @@ public class AlertInfo {
     }
 
     /**
-     * 获取ipAddress属性的值。
+     * 锟斤拷取ipAddress锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getIPAddress() {
-        return ipAddress;
+    public String getiPAddress() {
+        return iPAddress;
     }
 
     /**
-     * 设置ipAddress属性的值。
+     * 锟斤拷锟斤拷ipAddress锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setIPAddress(String value) {
-        this.ipAddress = value;
+    public void setiPAddress(String value) {
+        this.iPAddress = value;
     }
 
     /**
-     * 获取alarmID属性的值。
+     * 锟斤拷取alarmID锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -224,7 +229,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置alarmID属性的值。
+     * 锟斤拷锟斤拷alarmID锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -236,7 +241,7 @@ public class AlertInfo {
     }
 
     /**
-     * 获取alarmCate属性的值。
+     * 锟斤拷取alarmCate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -248,7 +253,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置alarmCate属性的值。
+     * 锟斤拷锟斤拷alarmCate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -260,7 +265,7 @@ public class AlertInfo {
     }
 
     /**
-     * 获取alarmType属性的值。
+     * 锟斤拷取alarmType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -272,7 +277,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置alarmType属性的值。
+     * 锟斤拷锟斤拷alarmType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -284,7 +289,7 @@ public class AlertInfo {
     }
 
     /**
-     * 获取alarmLevel属性的值。
+     * 锟斤拷取alarmLevel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -296,7 +301,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置alarmLevel属性的值。
+     * 锟斤拷锟斤拷alarmLevel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -308,7 +313,7 @@ public class AlertInfo {
     }
 
     /**
-     * 获取alarmContent属性的值。
+     * 锟斤拷取alarmContent锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -320,7 +325,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置alarmContent属性的值。
+     * 锟斤拷锟斤拷alarmContent锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -332,7 +337,7 @@ public class AlertInfo {
     }
 
     /**
-     * 获取alarmStatus属性的值。
+     * 锟斤拷取alarmStatus锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -344,7 +349,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置alarmStatus属性的值。
+     * 锟斤拷锟斤拷alarmStatus锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -356,7 +361,7 @@ public class AlertInfo {
     }
 
     /**
-     * 获取firstTime属性的值。
+     * 锟斤拷取firstTime锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -368,7 +373,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置firstTime属性的值。
+     * 锟斤拷锟斤拷firstTime锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -380,7 +385,7 @@ public class AlertInfo {
     }
 
     /**
-     * 获取endTime属性的值。
+     * 锟斤拷取endTime锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -392,7 +397,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置endTime属性的值。
+     * 锟斤拷锟斤拷endTime锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -404,7 +409,7 @@ public class AlertInfo {
     }
 
     /**
-     * 获取alarmCount属性的值。
+     * 锟斤拷取alarmCount锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -416,7 +421,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置alarmCount属性的值。
+     * 锟斤拷锟斤拷alarmCount锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -428,7 +433,7 @@ public class AlertInfo {
     }
 
     /**
-     * 获取closeTime属性的值。
+     * 锟斤拷取closeTime锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -440,7 +445,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置closeTime属性的值。
+     * 锟斤拷锟斤拷closeTime锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -452,7 +457,7 @@ public class AlertInfo {
     }
 
     /**
-     * 获取orderID属性的值。
+     * 锟斤拷取orderID锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -464,7 +469,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置orderID属性的值。
+     * 锟斤拷锟斤拷orderID锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -476,7 +481,7 @@ public class AlertInfo {
     }
 
     /**
-     * 获取className属性的值。
+     * 锟斤拷取className锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -488,7 +493,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置className属性的值。
+     * 锟斤拷锟斤拷className锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -500,7 +505,7 @@ public class AlertInfo {
     }
 
     /**
-     * 获取scene属性的值。
+     * 锟斤拷取scene锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -512,7 +517,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置scene属性的值。
+     * 锟斤拷锟斤拷scene锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -524,7 +529,7 @@ public class AlertInfo {
     }
 
     /**
-     * 获取time属性的值。
+     * 锟斤拷取time锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -536,7 +541,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置time属性的值。
+     * 锟斤拷锟斤拷time锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -548,7 +553,7 @@ public class AlertInfo {
     }
 
     /**
-     * 获取mainData属性的值。
+     * 锟斤拷取mainData锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -560,7 +565,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置mainData属性的值。
+     * 锟斤拷锟斤拷mainData锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -572,7 +577,7 @@ public class AlertInfo {
     }
 
     /**
-     * 获取sendto属性的值。
+     * 锟斤拷取sendto锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -584,7 +589,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置sendto属性的值。
+     * 锟斤拷锟斤拷sendto锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -596,7 +601,7 @@ public class AlertInfo {
     }
 
     /**
-     * 获取subject属性的值。
+     * 锟斤拷取subject锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -608,7 +613,7 @@ public class AlertInfo {
     }
 
     /**
-     * 设置subject属性的值。
+     * 锟斤拷锟斤拷subject锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -619,4 +624,27 @@ public class AlertInfo {
         this.subject = value;
     }
 
+    /**
+     * 锟斤拷取platform锟斤拷锟皆碉拷值锟斤拷
+     *
+     * @return
+     *     possible object is
+     *     {@link String }
+     *
+     */
+    public String getPlatform() {
+        return platform;
+    }
+
+    public void setPlatform(String value) {
+        this.platform = value;
+    }
+
+    public String getHost() {
+        return host;
+    }
+
+    public void setHost(String value) {
+        this.host = value;
+    }
 }

@@ -1,5 +1,5 @@
 
-package com.csg.exchange.client.service.webServiceClient;
+package com.csg.exchange.client.service.webserviceClient;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "CountriesPortService", targetNamespace = "http://spring.io/guides/gs-producing-web-service", wsdlLocation = "file:/C:/Users/gophic/IdeaProjects/client/src/main/resources/countries.wsdl")
+@WebServiceClient(name = "CountriesPortService", targetNamespace = "http://spring.io/guides/gs-producing-web-service", wsdlLocation = "file:/C:/projects/work/crossClient/src/main/resources/countries.wsdl")
 public class CountriesPortService
     extends Service
 {
@@ -30,7 +30,7 @@ public class CountriesPortService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("file:/C:/Users/gophic/IdeaProjects/client/src/main/resources/countries.wsdl");
+            url = new URL("http://localhost:5000/ws/countries.wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

@@ -1,5 +1,5 @@
 
-package com.csg.exchange.client.service.webServiceClient;
+package com.csg.exchange.client.service.webserviceClient;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
