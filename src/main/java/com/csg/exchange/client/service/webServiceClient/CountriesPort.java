@@ -1,5 +1,5 @@
 
-package com.csg.exchange.client.service.webserviceClient;
+package com.csg.exchange.client.service.webServiceClient;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -27,7 +27,7 @@ public interface CountriesPort {
      * 
      * @param pushAlertInfoRequest
      * @return
-     *     returns com.csg.exchange.client.service.webserviceClient.PushAlertInfoResponse
+     *     returns com.csg.exchange.client.service.webServiceClient.PushAlertInfoResponse
      */
     @WebMethod
     @WebResult(name = "pushAlertInfoResponse", targetNamespace = "http://spring.io/guides/gs-producing-web-service", partName = "pushAlertInfoResponse")
