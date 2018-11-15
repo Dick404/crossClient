@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://spring.io/guides/gs-producing-web-service" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://spring.io/guides/gs-producing-web-service" targetNamespace="http://spring.io/guides/gs-producing-web-service">
+  <wsdl:types>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://spring.io/guides/gs-producing-web-service">
+
+    <xs:element name="pushAlertInfoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="tns:alertInfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="pushAlertInfoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="alertInfo">
+        <xs:sequence>
+            <xs:element name="areaCode" type="xs:string"/>
+            <xs:element name="id" type="xs:string"/>
+            <xs:element name="originalID" type="xs:string"/>
+            <xs:element name="iPAddress" type="xs:string"/>
+            <xs:element name="alarmID" type="xs:string"/>
+            <xs:element name="alarmCate" type="xs:string"/>
+            <xs:element name="alarmType" type="xs:string"/>
+            <xs:element name="alarmLevel" type="xs:string"/>
+            <xs:element name="alarmContent" type="xs:string"/>
+            <xs:element name="alarmStatus" type="xs:string"/>
+            <xs:element name="firstTime" type="xs:string"/>
+            <xs:element name="endTime" type="xs:string"/>
+            <xs:element name="alarmCount" type="xs:string"/>
+            <xs:element name="closeTime" type="xs:string"/>
+            <xs:element name="orderID" type="xs:string"/>
+            <xs:element name="className" type="xs:string"/>
+            <xs:element name="scene" type="xs:string"/>
+            <xs:element name="time" type="xs:string"/>
+            <xs:element name="mainData" type="xs:string"/>
+            <xs:element name="sendto" type="xs:string"/>
+            <xs:element name="subject" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="pushAlertInfoResponse">
+    <wsdl:part element="tns:pushAlertInfoResponse" name="pushAlertInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pushAlertInfoRequest">
+    <wsdl:part element="tns:pushAlertInfoRequest" name="pushAlertInfoRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CountriesPort">
+    <wsdl:operation name="pushAlertInfo">
+      <wsdl:input message="tns:pushAlertInfoRequest" name="pushAlertInfoRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:pushAlertInfoResponse" name="pushAlertInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CountriesPortSoap11" type="tns:CountriesPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="pushAlertInfo">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="pushAlertInfoRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="pushAlertInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CountriesPortService">
+    <wsdl:port binding="tns:CountriesPortSoap11" name="CountriesPortSoap11">
+      <soap:address location="http://localhost:8080/ws"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

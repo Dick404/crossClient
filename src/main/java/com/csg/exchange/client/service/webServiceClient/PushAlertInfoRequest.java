@@ -1,5 +1,5 @@
 
-package com.csg.exchange.client.service.webserviceClient;
+package com.csg.exchange.client.service.webServiceClient;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -31,10 +31,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "name"
 })
-@XmlRootElement(name = "pushAlertInfoRequest", namespace = "http://spring.io/guides/gs-producing-web-service")
+@XmlRootElement(name = "pushAlertInfoRequest")
 public class PushAlertInfoRequest {
 
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected AlertInfo name;
 
     /**

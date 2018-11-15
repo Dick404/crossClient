@@ -1,5 +1,5 @@
 
-package com.csg.exchange.client.service.webserviceClient;
+package com.csg.exchange.client.service.webServiceClient;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -47,7 +47,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "alertInfo", namespace = "http://spring.io/guides/gs-producing-web-service", propOrder = {
+@XmlType(name = "alertInfo", propOrder = {
     "areaCode",
     "id",
     "originalID",
@@ -72,47 +72,47 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class AlertInfo {
 
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String areaCode;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String id;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String originalID;
-    @XmlElement(name = "iPAddress", namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(name = "iPAddress", required = true)
     protected String ipAddress;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String alarmID;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String alarmCate;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String alarmType;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String alarmLevel;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String alarmContent;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String alarmStatus;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String firstTime;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String endTime;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String alarmCount;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String closeTime;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String orderID;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String className;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String scene;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String time;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String mainData;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String sendto;
-    @XmlElement(namespace = "http://spring.io/guides/gs-producing-web-service", required = true)
+    @XmlElement(required = true)
     protected String subject;
 
     /**
