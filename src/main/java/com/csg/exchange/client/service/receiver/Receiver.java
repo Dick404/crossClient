@@ -1,6 +1,5 @@
 package com.csg.exchange.client.service.receiver;
 
-import com.csg.exchange.client.controller.BaseController;
 import com.csg.exchange.client.service.webserviceClient.AlertInfo;
 import com.csg.exchange.client.service.webserviceClient.CountriesPort;
 import com.csg.exchange.client.service.webserviceClient.CountriesPortService;
@@ -12,6 +11,7 @@ public class Receiver extends AbstractReceiver{
         CountriesPort service = new CountriesPortService().getCountriesPortSoap11();
         PushAlertInfoRequest push = new PushAlertInfoRequest();
         AlertInfo info = new AlertInfo();
+
         info.setAreaCode(alertInfo.getAreaCode());
         info.setId(alertInfo.getId());
         info.setOriginalID(alertInfo.getOriginalID());
@@ -37,11 +37,11 @@ public class Receiver extends AbstractReceiver{
         info.setHost(alertInfo.getHost());
 
         push.setName(info);
+
         try {
             service.pushAlertInfo(push);
         } catch (Exception e) {
             System.out.print(e);
         }
-        return;
     }
 }

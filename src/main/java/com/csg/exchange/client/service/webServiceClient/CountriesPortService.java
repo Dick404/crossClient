@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "CountriesPortService", targetNamespace = "http://spring.io/guides/gs-producing-web-service", wsdlLocation = "file:/C:/projects/work/crossClient/src/main/resources/countries.wsdl")
+@WebServiceClient(name = "CountriesPortService", targetNamespace = "http://spring.io/guides/gs-producing-web-service", wsdlLocation = "file:/C:/projects/work/nanwang/crossClient/src/main/resources/countries.wsdl")
 public class CountriesPortService
     extends Service
 {
